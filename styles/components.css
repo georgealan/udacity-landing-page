@@ -11,7 +11,6 @@ body {
 }
 
 /* #### NAVBAR #### */
-/* MENU FULL DESKTOP VERSION */
 .header {
     display: flex;
     align-items: center;
@@ -28,24 +27,22 @@ body {
     background-color: #fff;
 }
 
-/* MENU STICKY DESKTOP VERSION */
-/* .header.sticky {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    position: sticky;
-    top: 0;
-    background-color: #ffffff;
+li {
+    margin: 0 0 0 2em;
+    list-style: none;
 }
 
-.nav {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 1400px;
-    height: 90px;
+.nav ul li.active {
+    border-bottom: 1px solid #F1B847;
+}
+
+/* .nav ul li.active a {
+    color: #F1B847;
 } */
+
+#menu-navigation {
+    display: flex;
+}
 
 /* #### MAIN CONTENT #### */
 main {
@@ -70,7 +67,7 @@ main {
     max-width: 1400px;
 }
 
-.sec-breads {
+.sec-breeds {
     width: 100%;
     max-width: 1400px;
 }
@@ -88,6 +85,21 @@ main {
 .sec-prices {
     width: 100%;
     max-width: 1400px;
+}
+
+/* #### BUTTONS #### */
+#btn-scroll-top {
+    display: none;
+    z-index: 990;
+    padding: 0.6em;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    position: fixed;
+    bottom: 4vh;
+    right: 4vw;
+    background-color: #F1B847;
+    font-size: 1.2em;
 }
 
 /* #### FOOTER #### */
@@ -117,3 +129,21 @@ main {
 }
 
 /* #### MEDIA QUERIES #### */
+/* MENU STICKY DESKTOP VERSION */
+/* .header.sticky {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    height: 90px;
+} */
