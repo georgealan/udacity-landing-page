@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Lora Regular';
+    src: url('../assets/fonts/lora-regular.eot');
+    src: url('../assets/fonts/lora-regular.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/lora-regular.woff2') format('woff2'),
+         url('../assets/fonts/lora-regular.woff') format('woff'),
+         url('../assets/fonts/lora-regular.ttf') format('ttf'),
+         url('../assets/fonts/lora-regular.svg#loraregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway Italic';
+    src: url('../assets/fonts/raleway-italic.eot');
+    src: url('../assets/fonts/raleway-italic.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/raleway-italic.woff2') format('woff2'),
+         url('../assets/fonts/raleway-italic.woff') format('woff'),
+         url('../assets/fonts/raleway-italic.ttf') format('ttf'),
+         url('../assets/fonts/raleway-italic.svg#ralewayitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway Regular';
+    src: url('../assets/fonts/raleway-regular.eot');
+    src: url('../assets/fonts/raleway-regular.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/raleway-regular.woff2') format('woff2'),
+         url('../assets/fonts/raleway-regular.woff') format('woff'),
+         url('../assets/fonts/raleway-regular.ttf') format('ttf'),
+         url('../assets/fonts/raleway-regular.svg#ralewayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

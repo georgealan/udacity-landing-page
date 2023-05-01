@@ -1,0 +1,119 @@
+@import url(colors.css);
+
+/* #### GENERAL BOBY #### */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    background: url('../assets/images/page-pattern-backround.jpg');
+}
+
+/* #### NAVBAR #### */
+/* MENU FULL DESKTOP VERSION */
+.header {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 40px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    width: 85vw;
+    max-width: 1400px;
+    height: 90px;
+    background-color: #fff;
+}
+
+/* MENU STICKY DESKTOP VERSION */
+/* .header.sticky {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    height: 90px;
+} */
+
+/* #### MAIN CONTENT #### */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* #### SECTIONS #### */
+.sections {
+    height: 100vh;
+    padding: 1em;
+}
+
+.sec-hero {
+    width: 100vw;
+    background-color: green;
+}
+
+.sec-services {
+    width: 100%;
+    max-width: 1400px;
+}
+
+.sec-breads {
+    width: 100%;
+    max-width: 1400px;
+}
+
+.sec-gallery {
+    width: 100vw;
+    background-color: rgb(228, 224, 22);
+}
+
+.sec-team {
+    width: 100%;
+    max-width: 1400px;
+}
+
+.sec-prices {
+    width: 100%;
+    max-width: 1400px;
+}
+
+/* #### FOOTER #### */
+.footer-top {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 400px; /* Change to auto when insert content */
+    background-color: #171615;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    padding: 1em;
+    background-color: #fff;
+}
+
+.footer-bottom {
+    display: flex;
+    width: 100vw;
+    height: 85px;
+    padding: 1em;
+    border-top: 1px solid #30302f;
+    background-color: #0f0f0f;
+}
+
+/* #### MEDIA QUERIES #### */
