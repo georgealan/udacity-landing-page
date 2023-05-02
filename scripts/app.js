@@ -47,6 +47,11 @@ window.addEventListener('scroll', () => {
         navbarStyle.style.backgroundColor = '#ffffff'
     }
     
+    // setTimeout(() => {
+    //     console.log('Scrolling has stopped!')
+    //     headerStyle.style.display = 'none'
+    // }, 5000)
+
     /* Control Active Links */
     let scrollPosition = document.documentElement.scrollTop
 
