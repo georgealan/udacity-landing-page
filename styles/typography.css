@@ -48,3 +48,15 @@ a {
     font-size: 0.9em;
     text-decoration: none;
 }
+
+/* #### HERO SECTION #### */
+.hero-content {
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content h1 {
+    text-transform: uppercase;
+    font-size: 4em;
+    line-height: 1em;
+}

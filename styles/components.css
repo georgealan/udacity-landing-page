@@ -5,7 +5,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
     height: auto;
     background: url('../assets/images/page-pattern-backround.jpg');
 }
@@ -25,6 +24,7 @@ body {
     max-width: 1400px;
     height: 90px;
     background-color: #fff;
+    border-radius: 0.3em;
 }
 
 li {
@@ -57,10 +57,11 @@ main {
     padding: 1em;
 }
 
-/* #### SECTIONS HERO #### */
-.sec-hero {
+/* #### SECTION HERO #### */
+.sec-hero {  
     width: 100vw;
     padding: 0;
+    margin: 0;
 }
 
 .sec-hero video {
@@ -73,26 +74,86 @@ main {
     object-fit: cover;
 }
 
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 35%;
+    padding: 1em;
+    height: 50vh;
+}
+
+.hero-content p {
+    max-width: 800px;
+    margin: 1em 0 0 0;
+}
+
+.hero-content h1 {
+    max-width: 1200px;
+}
+
+.hero-content h1::after {
+    width: 200px;
+    content: '';
+    display: flex;
+    margin: 0.2em auto;
+    border-bottom: 2px solid #F1B847;
+}
+
+.btn-view-more {
+    cursor: pointer;
+    background-color: #F1B847;
+    padding: 1em 2em;
+    border-radius: 0.3em;
+    margin: 1.5em 0 0 0;
+}
+
+.slide-btn-container {
+    display: flex;
+    position: relative;
+    bottom: 50px;
+}
+
+.btn-slide {
+    display: flex;
+    font-size: 4em;
+    color: #ffffff;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    margin: 0 0.5em 0 0.5em;
+}
+
+.btn-slide.left {
+    margin-right: auto;
+}
+
+/* #### SECTION SERVICES #### */
 .sec-services {
     width: 100%;
     max-width: 1400px;
 }
 
+/* #### SECTION BREADS #### */
 .sec-breeds {
     width: 100%;
     max-width: 1400px;
 }
 
+/* #### SECTION GALLERY #### */
 .sec-gallery {
     width: 100vw;
     background-color: rgb(228, 224, 22);
 }
 
+/* #### SECTION TEAM #### */
 .sec-team {
     width: 100%;
     max-width: 1400px;
 }
 
+/* #### SECTION PRICES #### */
 .sec-prices {
     width: 100%;
     max-width: 1400px;

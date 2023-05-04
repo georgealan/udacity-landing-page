@@ -1,0 +1,29 @@
+{
+    "contents": [
+        {
+           "title": "Family ranch with various attractions",
+           "body": "Our facility is ideal for everyone. We have many attractions and tours, with plenty of interaction with animals and qualified instructors. Check out the image gallery of our ranch.",
+           "link": "#gallery"
+        },
+        {
+            "title": "Beautiful horse breeds",
+            "body": "We have a wide variety of purebred horses, award-winning horses. Take a look at some of our animals.",
+            "link": "#breeds"
+        },
+        {
+            "title": "Many attractions at affordable prices",
+            "body": "We offer a wide variety of attractions and a veterinary medical center, hotel, jockey lessons, and much more at affordable prices. See our prices.",
+            "link": "#prices"
+        },
+        {
+            "title": "Specialized veterinary medical center",
+            "body": "We have one of the best equine veterinary centers in the state, a premium facility with high-quality specialist doctors, guided tours, psychological rehabilitation treatment using horses, horseback riding, racing, and much more. Explore our services.",
+            "link": "#services"
+        },
+        {
+            "title": "Equine specialized team",
+            "body": "Our team specializes in horse breeding. We work hard to be a reference in breeding championship-winning breeds. Get to know some of the members of our team.",
+            "link": "#team"
+        }
+    ]
+}
