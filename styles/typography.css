@@ -60,3 +60,7 @@ a {
     font-size: 4em;
     line-height: 1em;
 }
+
+.btn-view-more {
+    font-weight: 600;
+}

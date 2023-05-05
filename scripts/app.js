@@ -7,9 +7,11 @@ const videoBackground = document.getElementById('video-bg')
 const heroText = document.getElementById('hero-text')
 const btnSlideLeft = document.getElementById('btn-slide-left')
 const btnSlideRight = document.getElementById('btn-slide-right')
+const heroSection = document.getElementById('hero')
+// const servicesSection = document.getElementById('services')
 
 
-/* Fill navbar dinamically */
+// Fill navbar dinamically
 for(const section of sectionsLinks) {
     const list = document.createElement('li')
     const link = document.createElement('a')
@@ -22,16 +24,16 @@ for(const section of sectionsLinks) {
     menuNavigation.appendChild(list)
 }
 
-/* Page Scrool Events */
+// Page Scrool Events
 window.addEventListener('scroll', () => {
-    /* Control Button Scroll to Top */
+    // Control Button Scroll to Top
     if(document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
         btnScrollToTop.style.display = 'block'
     } else {
         btnScrollToTop.style.display = 'none'
     }
 
-    /* Control Menu Bar Sticky */
+    // Control Menu Bar Sticky
     if(document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
         headerStyle.style.position = 'sticky'
         headerStyle.style.top = 0
@@ -57,7 +59,7 @@ window.addEventListener('scroll', () => {
     //     headerStyle.style.display = 'none'
     // }, 5000)
 
-    /* Control Active Links */
+    // Control Active Links
     let scrollPosition = document.documentElement.scrollTop
 
     for(const section of sectionsLinks) {
@@ -125,6 +127,11 @@ btnSlideRight.addEventListener('click', () => {
         fillHeroTextContent(count)
     }
 })
+
+// servicesSection.addEventListener('wheel', (e) => {
+//     e.preventDefault()
+//     servicesSection.scrollLeft += e.deltaY
+// })
 
 // Control buttom scroll to top
 btnScrollToTop.addEventListener('click', () => {
