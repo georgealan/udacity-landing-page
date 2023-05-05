@@ -23,7 +23,7 @@ body {
     align-items: center;
     width: 85vw;
     max-width: 1400px;
-    height: 90px;
+    height: 80px;
     background-color: #fff;
     border-radius: 0.3em;
 }
@@ -143,35 +143,9 @@ main {
 }
 
 /* #### SECTION SERVICES #### */
-/* TODO: WORK HERE FOR HORIZONTAL SCROOLING */
 .sec-services {
     width: 100%;
-    /* max-width: 1400px; */
-    display: flex;
-    overflow-x: hidden;
-}
-
-.service-element {
-    min-width: 100%;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-}
-
-.service-1 {
-    background-color: red;
-}
-
-.service-2 {
-    background-color: aqua;
-}
-
-.service-3 {
-    background-color: green;
-}
-
-.service-4 {
-    background-color: yellow;
+    max-width: 1400px;
 }
 
 /* #### SECTION BREADS #### */
@@ -179,6 +153,14 @@ main {
     width: 100%;
     max-width: 1400px;
 }
+
+.breed-element {
+    min-width: 100%;
+    width: 100%;
+    height: 90vh;
+    flex-shrink: 0;
+}
+
 
 /* #### SECTION GALLERY #### */
 .sec-gallery {

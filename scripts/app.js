@@ -8,7 +8,6 @@ const heroText = document.getElementById('hero-text')
 const btnSlideLeft = document.getElementById('btn-slide-left')
 const btnSlideRight = document.getElementById('btn-slide-right')
 const heroSection = document.getElementById('hero')
-// const servicesSection = document.getElementById('services')
 
 
 // Fill navbar dinamically
@@ -42,6 +41,7 @@ window.addEventListener('scroll', () => {
         headerStyle.style.backgroundColor = '#ffffff'
         
         navbarStyle.style.width = 100 + '%'
+        navbarStyle.style.height = 70 + 'px'
         navbarStyle.style.backgroundColor = null
     } else {
         headerStyle.style.position = 'absolute'
@@ -51,6 +51,7 @@ window.addEventListener('scroll', () => {
         headerStyle.style.backgroundColor = null
         
         navbarStyle.style.width = 85 + 'vw'
+        navbarStyle.style.height = 80 + 'px'
         navbarStyle.style.backgroundColor = '#ffffff'
     }
     
@@ -61,14 +62,19 @@ window.addEventListener('scroll', () => {
 
     // Control Active Links
     let scrollPosition = document.documentElement.scrollTop
-
     for(const section of sectionsLinks) {
         if(scrollPosition >= section.offsetTop - section.offsetHeight * 0.25 && 
             scrollPosition < section.offsetTop + section.offsetHeight - section.offsetHeight * 0.25) {
             activeClass(section.attributes.id.value)
         }
-    }
+    } 
+    
 })
+
+// document.addEventListener('wheel', (e) => {
+//     let secBread = document.querySelector('.sticky')
+//     secBread.scrollLeft += e.deltaY
+// })
 
 function activeClass(id) {
     const linksNav = document.querySelectorAll('#menu-navigation li')
@@ -128,14 +134,8 @@ btnSlideRight.addEventListener('click', () => {
     }
 })
 
-// servicesSection.addEventListener('wheel', (e) => {
-//     e.preventDefault()
-//     servicesSection.scrollLeft += e.deltaY
-// })
-
 // Control buttom scroll to top
 btnScrollToTop.addEventListener('click', () => {
     document.body.scrollTop = 0
     document.documentElement.scrollTop = 0
 })
-
