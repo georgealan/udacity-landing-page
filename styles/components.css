@@ -75,6 +75,24 @@ main {
     object-fit: cover;
 }
 
+.video-slider.animation-left {
+    animation: circle-left 2s ease;
+}
+
+.video-slider.animation-right {
+    animation: circle-right 2s ease;
+}
+
+@keyframes circle-right {
+    0% { clip-path: circle(0% at 0 50%); }
+    100% { clip-path: circle(150% at 0 50%); }
+}
+
+@keyframes circle-left {
+    0% { clip-path: circle(0% at 100% 50%); }
+    100% { clip-path: circle(150% at 100% 50%); }
+}
+
 .hero-content {
     display: flex;
     flex-direction: column;
@@ -151,17 +169,26 @@ main {
 /* #### SECTION BREADS #### */
 .sec-breeds {
     width: 100%;
+    height: auto;
     max-width: 1400px;
 }
 
 .breed-element {
     display: flex;
-    flex-direction: column;
 }
 
 .horse-title {
-    border-bottom: 2px solid #F1B847;
-    border-left: 2px solid #F1B847;
+    border-bottom: 1px solid #F1B847;
+    border-left: 1px solid #F1B847;
+    margin: 0 0 2em 0;
+}
+
+.horse-title h2 {
+    margin: 0 0 0.3em 0.6em;
+}
+
+.horse-title ul {
+    margin: 0 0 0 -1.3em;
 }
 
 .horse-info {
@@ -170,7 +197,49 @@ main {
 
 .horse-info li:first-child {
     margin-left: 0;
+    margin-right: -1em;
+}
 
+.horse-info li:nth-child(3) {
+    border-left: 1px solid #F1B847;
+    border-right: 1px solid #F1B847;
+    padding: 0 1.3em 0 1.3em;
+}
+
+.breed-text {
+    display: flex;
+    margin: 5em 0 5em 0;
+}
+
+.text-first-cl {
+    width: 30%;
+    padding: 0 2em 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.call-description {
+    border-top: 1px solid #F1B847;
+    border-bottom: 1px solid #F1B847;
+}
+
+.text-first-cl h2 {
+    margin-top: auto;
+    margin-bottom: 0.5em;
+}
+
+.text-second-cl {
+    width: 70%;
+}
+
+.text-second-cl h2 {
+    margin: 0 0 0.5em 0;
+}
+
+.horse-breed-img {
+    max-width: 1017px;
+    width: 100%;
+    height: auto;
 }
 
 /* #### SECTION GALLERY #### */
@@ -230,6 +299,30 @@ main {
     padding: 1em;
     border-top: 1px solid #30302f;
     background-color: #0f0f0f;
+}
+
+/* #### PARALLAX SECTIONS #### */
+.testimony {
+    height: 500px;
+    width: 100%;
+    background-image: url('../assets/images/parallax-1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.newsletter {
+    height: 500px;
+    width: 100%;
+    background-image: url('../assets/images/parallax-2.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.brands {
+    height: 280px;
+    width: 100%;
+    background-image: url('../assets/images/parallax-3.jpg');
+    background-size: cover;
 }
 
 /* #### MEDIA QUERIES #### */

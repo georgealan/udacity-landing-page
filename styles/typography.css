@@ -5,7 +5,7 @@
 body {
     font-family: 'Raleway Regular';
     font-size: 18px;
-    line-height: 1.6em;
+    line-height: 1.8em;
     color: #262626;
 }
 
@@ -72,4 +72,10 @@ a {
 
 .fa-horse-head {
     font-size: 2em;
+}
+
+.call-description {
+    font-size: 1.5em;
+    line-height: 1.2em;
+    font-family: 'Raleway Italic';
 }
