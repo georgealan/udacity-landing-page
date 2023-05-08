@@ -64,3 +64,12 @@ a {
 .btn-view-more {
     font-weight: 600;
 }
+
+.horse-info li h4 {
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+.fa-horse-head {
+    font-size: 2em;
+}
