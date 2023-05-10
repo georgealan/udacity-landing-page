@@ -1,15 +1,15 @@
+const menuNavigation = document.getElementById('menu-navigation')
+const sectionsLinks = document.getElementsByClassName('sections')
+const btnScrollToTop = document.getElementById('btn-scroll-top')
+const headerStyle = document.querySelector('.header')
+const navbarStyle = document.querySelector('.nav')
+const videoBackground = document.getElementById('video-bg')
+const heroText = document.getElementById('hero-text')
+const btnSlideLeft = document.getElementById('btn-slide-left')
+const btnSlideRight = document.getElementById('btn-slide-right')
+
+
 window.onload = () => {
-    const menuNavigation = document.getElementById('menu-navigation')
-    const sectionsLinks = document.getElementsByClassName('sections')
-    const btnScrollToTop = document.getElementById('btn-scroll-top')
-    const headerStyle = document.querySelector('.header')
-    const navbarStyle = document.querySelector('.nav')
-    const videoBackground = document.getElementById('video-bg')
-    const heroText = document.getElementById('hero-text')
-    const btnSlideLeft = document.getElementById('btn-slide-left')
-    const btnSlideRight = document.getElementById('btn-slide-right')
-
-
     // Fill navbar dinamically
     for(const section of sectionsLinks) {
         const list = document.createElement('li')

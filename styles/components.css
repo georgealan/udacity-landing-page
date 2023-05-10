@@ -73,6 +73,8 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* opacity: 0.8; */
+    /* filter: brightness(.8); */
 }
 
 .video-slider.animation-left {
@@ -138,7 +140,7 @@ main {
 
 .btn-slide {
     display: flex;
-    font-size: 4em;
+    font-size: 3em;
     color: #ffffff;
     cursor: pointer;
     background: transparent;
@@ -164,6 +166,7 @@ main {
 .sec-services {
     width: 100%;
     max-width: 1400px;
+    padding: 4em 1em 0 1em;
 }
 
 /* #### SECTION BREADS #### */
@@ -171,6 +174,7 @@ main {
     width: 100%;
     height: auto;
     max-width: 1400px;
+    padding: 4em 1em 0 1em;
 }
 
 .breed-element {
@@ -244,20 +248,84 @@ main {
 
 /* #### SECTION GALLERY #### */
 .sec-gallery {
-    width: 100vw;
-    background-color: rgb(228, 224, 22);
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 'item1 item2 item3 item4 item5'
+                         'item6 item7 item3 item8 item8'
+                         'item6 item9 item9 item10 item11';
+    gap: 0.7rem;
+    padding: 0 1.5em 1.5em 1.5em;
 }
+
+.item {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.item1 {
+    grid-area: item1;
+}
+
+.item2 {
+    grid-area: item2;
+}
+
+.item3 {
+    grid-area: item3;
+}
+
+.item4 {
+    grid-area: item4;
+}
+
+.item5 {
+    grid-area: item5;
+}
+
+.item6 {
+    grid-area: item6;
+}
+
+.item7 {
+    grid-area: item7;
+}
+
+.item8 {
+    grid-area: item8;
+}
+
+.item9 {
+    grid-area: item9;
+}
+
+.item10 {
+    grid-area: item10;
+}
+
+.item11 {
+    grid-area: item11;
+}
+
+
+
+
+
 
 /* #### SECTION TEAM #### */
 .sec-team {
     width: 100%;
     max-width: 1400px;
+    padding: 4em 1em 0 1em;
 }
 
 /* #### SECTION PRICES #### */
 .sec-prices {
     width: 100%;
     max-width: 1400px;
+    padding: 4em 1em 0 1em;
 }
 
 /* #### BUTTONS #### */
@@ -306,6 +374,7 @@ main {
     height: 500px;
     width: 100%;
     background-image: url('../assets/images/parallax-1.jpg');
+    opacity: 0.8;
     background-attachment: fixed;
     background-size: cover;
 }
@@ -314,6 +383,7 @@ main {
     height: 500px;
     width: 100%;
     background-image: url('../assets/images/parallax-2.jpg');
+    opacity: 0.8;
     background-attachment: fixed;
     background-size: cover;
 }
@@ -322,6 +392,9 @@ main {
     height: 280px;
     width: 100%;
     background-image: url('../assets/images/parallax-3.jpg');
+    opacity: 0.9;
+    filter: brightness(.1);
+    background-attachment: fixed;
     background-size: cover;
 }
 
