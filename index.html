@@ -55,7 +55,9 @@
                 </ul>
             </div>
             <div class="breed-element">
-                <img class="horse-breed-img" src="" alt="Horse image">
+                <figure class="img-breed-container">
+                    <img class="horse-breed-img" src="" alt="Horse image">
+                </figure>
                 <div class="breed-buttons">
                     <button class="btn-breed current" data-json="0">Breed 1</button>
                     <button class="btn-breed" data-json="1">Breed 2</button>
@@ -80,39 +82,50 @@
 
         <section id="gallery" class="sections sec-gallery" data-nav="Gallery">
             <figure class="img-container item1">
-                <img class="gallery-item" src="assets/images/gallery/small-3.jpg" alt="Red-haired girl with straw hat hugging a horse's face">
+                <img class="gallery-item" data-index="0" src="assets/images/gallery/small-3.jpg" alt="Red-haired girl with straw hat hugging a horse's face">
             </figure>
             <figure class="img-container item2">
-                <img class="gallery-item" src="assets/images/gallery/small-6.jpg" alt="Bust of a brown horse">
+                <img class="gallery-item" data-index="1" src="assets/images/gallery/small-6.jpg" alt="Bust of a brown horse">
             </figure>
             <figure class="img-container item3">
-                <img class="gallery-item" src="assets/images/gallery/medium-vertical-2.jpg" alt="Woman in a stable, holding the horse by the stirrup with one hand and stroking the horse's face with the other hand">
+                <img class="gallery-item" data-index="2" src="assets/images/gallery/medium-vertical-2.jpg" alt="Woman in a stable, holding the horse by the stirrup with one hand and stroking the horse's face with the other hand">
             </figure>
             <figure class="img-container item4">
-                <img class="gallery-item" src="assets/images/gallery/small-5.jpg" alt="Strong galloping horse that even releases dust from the dirt floor">
+                <img class="gallery-item" data-index="3" src="assets/images/gallery/small-5.jpg" alt="Strong galloping horse that even releases dust from the dirt floor">
             </figure>
             <figure class="img-container item5">
-                <img class="gallery-item" src="assets/images/gallery/small-4.jpg" alt="Jockey girl next to her beige colored horse">
+                <img class="gallery-item" data-index="4" src="assets/images/gallery/small-4.jpg" alt="Jockey girl next to her beige colored horse">
             </figure>
             <figure class="img-container item6">
-                <img class="gallery-item" src="assets/images/gallery/medium-vertical-1.jpg" alt="Woman in red checkered blouse on top of her brown horse">
+                <img class="gallery-item" data-index="5" src="assets/images/gallery/medium-vertical-1.jpg" alt="Woman in red checkered blouse on top of her brown horse">
             </figure>
             <figure class="img-container item7">
-                <img class="gallery-item" src="assets/images/gallery/small-7.jpg" alt="Blonde woman feeding a horse with one hand, the horse has its mouth in her hand">
+                <img class="gallery-item" data-index="6" src="assets/images/gallery/small-7.jpg" alt="Blonde woman feeding a horse with one hand, the horse has its mouth in her hand">
             </figure>
             <figure class="img-container item8">
-                <img class="gallery-item" src="assets/images/gallery/medium-horizontal-1.jpg" alt="Several horses galloping together, dust rising from the dirt road and in the background to the left a stone building">
+                <img class="gallery-item" data-index="7" src="assets/images/gallery/medium-horizontal-1.jpg" alt="Several horses galloping together, dust rising from the dirt road and in the background to the left a stone building">
             </figure>
             <figure class="img-container item9">
-                <img class="gallery-item" src="assets/images/gallery/medium-horizontal-2.jpg" alt="Two men in a stable feeding hay to horses">
+                <img class="gallery-item" data-index="8" src="assets/images/gallery/medium-horizontal-2.jpg" alt="Two men in a stable feeding hay to horses">
             </figure>
             <figure class="img-container item10">
-                <img class="gallery-item" src="assets/images/gallery/small-2.jpg" alt="A girl with her eyes closed hugging the face of a horse, their faces are together in a pose of feeling friendship, in the background a beautiful tree with yellow flowers">
+                <img class="gallery-item" data-index="9" src="assets/images/gallery/small-2.jpg" alt="A girl with her eyes closed hugging the face of a horse, their faces are together in a pose of feeling friendship, in the background a beautiful tree with yellow flowers">
             </figure>
             <figure class="img-container item11">
-                <img class="gallery-item" src="assets/images/gallery/small-1.jpg" alt="A girl with a straw hat is very smiling hugging the face of a black horse, in the background a forest with beautiful light green">
+                <img class="gallery-item" data-index="10" src="assets/images/gallery/small-1.jpg" alt="A girl with a straw hat is very smiling hugging the face of a black horse, in the background a forest with beautiful light green">
             </figure>
         </section>
+
+        <dialog class="gallery-modal">
+            <button class="btn-close-modal"><i class="fa-regular fa-x"></i></button>
+            <figure class="figure-modal">
+                <img class="gallery-img" src="" alt="">
+            </figure>
+            <div class="btn-gallery-wrapper">
+                <button id="btn-gallery-left" class="btn-gallery left" data-side="left"><i class="fa-light fa-chevron-left"></i></button>
+                <button id="btn-gallery-right" class="btn-gallery" data-side="right"><i class="fa-light fa-chevron-right"></i></button>
+            </div>
+        </dialog>
 
         <div class="newsletter">
             <h1>Parallax</h1>

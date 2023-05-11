@@ -22,6 +22,12 @@ const horseBreedFirstTextBody = document.querySelector('.tfcl-body')
 const horseBreedSecondTextHeader = document.querySelector('.tscl-header')
 const horseBreedSecondTextBody = document.querySelector('.tscl-body')
 
+const breedsImageGallery = document.querySelectorAll('.gallery-item')
+const modalImageGallery = document.querySelector('.gallery-img')
+const modalGallery = document.querySelector('.gallery-modal')
+const buttonCloseGalleryModal = document.querySelector('.btn-close-modal')
+const buttonsNextImages = document.querySelectorAll('.btn-gallery')
+let dialogModals = document.querySelectorAll('dialog');
 
 window.onload = () => {
     // Fill navbar dinamically
@@ -202,4 +208,51 @@ window.onload = () => {
             button.classList.remove('current')
         })
     }
+
+    // Control Image gallery modal view
+    let totalImagesInGallery = breedsImageGallery.length
+    let actualIndex = 0
+    
+    // Open modal when clicking on an image in the gallery
+    breedsImageGallery.forEach(image => {
+        image.addEventListener('click', () => {
+            let actualImgIndex = image.dataset.index
+            modalImageGallery.src = breedsImageGallery[actualImgIndex].src
+            modalGallery.showModal()
+            actualIndex = actualImgIndex
+        })
+    })
+
+    // Control buttom close Modal
+    buttonCloseGalleryModal.addEventListener('click', () => {
+        modalGallery.close()
+    })
+    // Close dialog modals when click in outside, backdrop
+    dialogModals.forEach(dialog => {
+        dialog.addEventListener('click', (e) => {
+            if(e.target.nodeName === 'DIALOG') {
+                dialog.close();
+            }
+        });
+    });
+
+    // Control buttons next and preview images
+    buttonsNextImages.forEach(buttom => {
+        buttom.addEventListener('click', () => {
+            if(buttom.dataset.side === 'left') {
+                if(actualIndex > 0) {
+                    actualIndex--
+                    modalImageGallery.src = breedsImageGallery[actualIndex].src
+                }
+            }
+            
+            if(buttom.dataset.side === 'right') {
+                if(actualIndex < totalImagesInGallery - 1) {
+                    actualIndex++
+                    modalImageGallery.src = breedsImageGallery[actualIndex].src
+                }
+            }
+        })
+    })
+
 }

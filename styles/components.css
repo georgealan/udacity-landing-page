@@ -270,9 +270,16 @@ main {
     margin: 0 0 0.5em 0;
 }
 
-.horse-breed-img {
+figure.img-breed-container {
     max-width: 1017px;
-    width: 80%;
+    width: 100%;
+    /* width: 80%; */
+    height: auto;
+    margin: auto;
+}
+
+.horse-breed-img {
+    width: 100%;
     height: auto;
 }
 
@@ -389,6 +396,76 @@ main {
 
 .item11 {
     grid-area: item11;
+}
+
+dialog::before {
+    content:"";
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.gallery-modal {
+    max-width: 1400px;
+    width: 100%;
+    height: 87vh;
+    margin: 0 auto;
+    position: fixed;
+    border: none;
+    z-index: 999;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.btn-close-modal {
+    position: fixed;
+    left: 82%;
+    top: 0;
+    font-size: 1.7em;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 1em;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.figure-modal {
+    width: 100%;
+    height: 100%;
+    margin: 3em 0 0 0;
+    /* display: flex;
+    position: relative;
+    top: 50%; */
+}
+
+.btn-gallery-wrapper {
+    display: flex;
+    position: relative;
+    bottom: 54%;
+}
+
+.btn-gallery {
+    display: flex;
+    font-size: 2.8em;
+    color: #ffffff;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    margin: 0 0.5em 0 0.5em;
+}
+
+.btn-gallery.left {
+    margin-right: auto;
 }
 
 /* #### SECTION TEAM #### */

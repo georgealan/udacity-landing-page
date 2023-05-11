@@ -43,6 +43,7 @@ h4 {
 .sec-team h1,
 .sec-prices h1 {
     text-transform: uppercase;
+    text-align: center;
 }
 
 /* #### QUOTES #### */
