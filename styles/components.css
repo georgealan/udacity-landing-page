@@ -164,17 +164,47 @@ main {
 
 /* #### SECTION SERVICES #### */
 .sec-services {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 1400px;
     padding: 4em 1em 0 1em;
 }
 
+.sec-services h1 {
+    align-self: center;
+    margin: 0 0 1em 0;
+}
+
+.sec-services h1::after {
+    width: 130px;
+    content: '';
+    display: flex;
+    margin: 0.2em auto;
+    border-bottom: 2px solid #F1B847;
+}
+
 /* #### SECTION BREADS #### */
 .sec-breeds {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: auto;
     max-width: 1400px;
     padding: 4em 1em 0 1em;
+}
+
+.sec-breeds h1 {
+    align-self: center;
+    margin: 0 0 1em 0;
+}
+
+.sec-breeds h1::after {
+    width: 130px;
+    content: '';
+    display: flex;
+    margin: 0.2em auto;
+    border-bottom: 2px solid #F1B847;
 }
 
 .breed-element {
@@ -242,19 +272,41 @@ main {
 
 .horse-breed-img {
     max-width: 1017px;
-    width: 100%;
+    width: 80%;
     height: auto;
 }
 
 .breed-buttons {
+    width: 20%;
     display: flex;
     flex-direction: column;
-    /* border-left: 1px solid #F1B847; */
+    align-content: flex-end;
+    flex-wrap: wrap;
 }
 
 .btn-breed {
     cursor: pointer;
-    padding: 0.6em 1.5em;
+    padding: 1em 1em;
+    border-radius: 50em;
+    width: 75px;
+    height: 75px;
+    background: transparent;
+    border: 1px solid #F1B847;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    
+}
+
+.btn-breed:active {
+    transform: scale(0.90);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+.btn-breed.current {
+    background-color: #F1B847;
+}
+
+.btn-breed:not(:last-child) {
+    margin: 0 0 1em 0;
 }
 
 .tscl-body {

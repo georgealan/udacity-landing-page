@@ -190,8 +190,16 @@ window.onload = () => {
 
     buttonsBreads.forEach(button => {
         button.addEventListener('click', () => {
+            removeCurrent()
+            button.classList.add('current')
             let index = button.dataset.json
             fillBreedTextContent(index)
         })
     })
+
+    function removeCurrent() {
+        buttonsBreads.forEach(button => {
+            button.classList.remove('current')
+        })
+    }
 }

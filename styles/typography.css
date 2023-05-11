@@ -35,6 +35,16 @@ h4 {
     line-height: 1.3em;
 }
 
+.sec-services h1,
+.testimony h1,
+.sec-breeds h1,
+.sec-gallery h1,
+.newsletter h1,
+.sec-team h1,
+.sec-prices h1 {
+    text-transform: uppercase;
+}
+
 /* #### QUOTES #### */
 q, cite, blockquote p {
     font-family: 'Raleway Italic';
