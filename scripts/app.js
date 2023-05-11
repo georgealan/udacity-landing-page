@@ -7,6 +7,20 @@ const videoBackground = document.getElementById('video-bg')
 const heroText = document.getElementById('hero-text')
 const btnSlideLeft = document.getElementById('btn-slide-left')
 const btnSlideRight = document.getElementById('btn-slide-right')
+const buttonsBreads = document.querySelectorAll('.btn-breed')
+
+// Section breeds DOM elements
+const imgHorseBreed = document.querySelector('.horse-breed-img')
+const horseBreedName = document.querySelector('.horse-breed-name')
+const horseBreedTitle = document.querySelector('.horse-title')
+const horseBreedHeight = document.querySelector('.horse-height')
+const horseBreedOrigin = document.querySelector('.horse-origin')
+const horseBreedColor = document.querySelector('.horse-color')
+const horseBreedOpeningText = document.querySelector('.call-description')
+const horseBreedFirstTextHeader = document.querySelector('.tfcl-header')
+const horseBreedFirstTextBody = document.querySelector('.tfcl-body')
+const horseBreedSecondTextHeader = document.querySelector('.tscl-header')
+const horseBreedSecondTextBody = document.querySelector('.tscl-body')
 
 
 window.onload = () => {
@@ -152,5 +166,32 @@ window.onload = () => {
     btnScrollToTop.addEventListener('click', () => {
         document.body.scrollTop = 0
         document.documentElement.scrollTop = 0
+    })
+
+    // Control buttons breeads section
+    fillBreedTextContent(0) // Populate the breeds contents for the first time
+
+    function fillBreedTextContent(index) {
+        fetch('breed-text.json').then((response) => {
+            response.json().then((data) => {
+                horseBreedName.innerText = data.contents[index].breedName
+                horseBreedHeight.innerText = data.contents[index].height
+                horseBreedOrigin.innerText = data.contents[index].origin
+                horseBreedColor.innerText = data.contents[index].colors
+                imgHorseBreed.src = data.contents[index].imagePath
+                horseBreedOpeningText.innerText = data.contents[index].openingText
+                horseBreedFirstTextHeader.innerText = data.contents[index].firstTextHeader
+                horseBreedFirstTextBody.innerText = data.contents[index].firstTextBody
+                horseBreedSecondTextHeader.innerText = data.contents[index].secondTextHeader
+                horseBreedSecondTextBody.innerText = data.contents[index].secondTextBody
+            })
+        })
+    }
+
+    buttonsBreads.forEach(button => {
+        button.addEventListener('click', () => {
+            let index = button.dataset.json
+            fillBreedTextContent(index)
+        })
     })
 }

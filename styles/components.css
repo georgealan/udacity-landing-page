@@ -246,6 +246,22 @@ main {
     height: auto;
 }
 
+.breed-buttons {
+    display: flex;
+    flex-direction: column;
+    /* border-left: 1px solid #F1B847; */
+}
+
+.btn-breed {
+    cursor: pointer;
+    padding: 0.6em 1.5em;
+}
+
+.tscl-body {
+    white-space: pre-line;
+}
+
+
 /* #### SECTION GALLERY #### */
 .sec-gallery {
     height: auto;
@@ -255,14 +271,28 @@ main {
                          'item6 item7 item3 item8 item8'
                          'item6 item9 item9 item10 item11';
     gap: 0.7rem;
-    padding: 0 1.5em 1.5em 1.5em;
+    padding: 4em 1.5em 1.5em 1.5em;
 }
 
-.item {
+.gallery-item {
     object-fit: cover;
     width: 100%;
     height: 100%;
     cursor: pointer;
+}
+
+.img-container {
+    overflow: hidden;
+}
+
+.sec-gallery img:hover {
+    -webkit-transform: scale(1.04) translateZ(0);
+    -moz-transform: scale(1.04) translateZ(0);
+    transform: scale(1.04) translateZ(0);
+    -webkit-transition: -webkit-transform .4s ease;
+    -moz-transition: -moz-transform .4s ease;
+    transition: transform .4s ease;
+    opacity: 0.8;
 }
 
 .item1 {
@@ -308,11 +338,6 @@ main {
 .item11 {
     grid-area: item11;
 }
-
-
-
-
-
 
 /* #### SECTION TEAM #### */
 .sec-team {
