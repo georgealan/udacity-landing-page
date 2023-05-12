@@ -218,6 +218,7 @@ window.onload = () => {
         image.addEventListener('click', () => {
             let actualImgIndex = image.dataset.index
             modalImageGallery.src = breedsImageGallery[actualImgIndex].src
+            modalImageGallery.alt = breedsImageGallery[actualImgIndex].alt
             modalGallery.showModal()
             actualIndex = actualImgIndex
         })
@@ -236,13 +237,14 @@ window.onload = () => {
         });
     });
 
-    // Control buttons next and preview images
+    // Control modal buttons next and preview images
     buttonsNextImages.forEach(buttom => {
         buttom.addEventListener('click', () => {
             if(buttom.dataset.side === 'left') {
                 if(actualIndex > 0) {
                     actualIndex--
                     modalImageGallery.src = breedsImageGallery[actualIndex].src
+                    modalImageGallery.alt = breedsImageGallery[actualIndex].alt
                 }
             }
             
@@ -250,6 +252,7 @@ window.onload = () => {
                 if(actualIndex < totalImagesInGallery - 1) {
                     actualIndex++
                     modalImageGallery.src = breedsImageGallery[actualIndex].src
+                    modalImageGallery.alt = breedsImageGallery[actualIndex].alt
                 }
             }
         })

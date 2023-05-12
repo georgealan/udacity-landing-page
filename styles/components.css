@@ -164,11 +164,9 @@ main {
 
 /* #### SECTION SERVICES #### */
 .sec-services {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
     max-width: 1400px;
-    padding: 4em 1em 0 1em;
+    height: auto;
+    padding: 3em 0 3em 0;
 }
 
 .sec-services h1 {
@@ -182,6 +180,31 @@ main {
     display: flex;
     margin: 0.2em auto;
     border-bottom: 2px solid #F1B847;
+}
+
+.service-article {
+    position: relative;
+    height: auto;
+    display: flex;
+}
+
+.service-article .img-service-box {
+    position: sticky;
+    top: 0;
+    min-width: 50%;
+    height: 100vh;
+}
+
+.service-article .img-service-box img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 600px;
+}
+
+.service-article .service-text-content {
+    padding: 5em 1em 2em 2em;
 }
 
 /* #### SECTION BREADS #### */
