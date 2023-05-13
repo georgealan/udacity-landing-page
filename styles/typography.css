@@ -95,3 +95,19 @@ a {
 .testimony {
     color: #fff;
 }
+
+.client-name {
+    text-transform: uppercase;
+    color: #F1B847;
+    font-family: 'Lora Regular';
+    font-size: 1em;
+}
+
+.client-profession {
+    font-size: 0.8em;
+}
+
+.fa-star {
+    font-size: 1em;
+    color: #F1B847;
+}

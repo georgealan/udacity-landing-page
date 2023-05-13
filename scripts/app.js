@@ -86,8 +86,7 @@ window.onload = () => {
                 scrollPosition < section.offsetTop + section.offsetHeight - section.offsetHeight * 0.25) {
                 activeClass(section.attributes.id.value)
             }
-        } 
-        
+        }
     })
 
     function activeClass(id) {

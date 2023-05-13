@@ -165,8 +165,8 @@ main {
 /* #### SECTION SERVICES #### */
 .sec-services {
     max-width: 1400px;
-    height: auto;
-    padding: 3em 0 3em 0;
+    height: 100vh;
+    padding: 4em 1em 3em 1em;
 }
 
 .sec-services h1 {
@@ -182,29 +182,21 @@ main {
     border-bottom: 2px solid #F1B847;
 }
 
-.service-article {
-    position: relative;
-    height: auto;
+.services-wrapper {
     display: flex;
+    margin: 4em 0 0 0;
 }
 
-.service-article .img-service-box {
-    position: sticky;
-    top: 0;
-    min-width: 50%;
-    height: 100vh;
+.service-box {
+    width: 33.33%;
 }
 
-.service-article .img-service-box img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    max-width: 600px;
+.service-box:nth-child(2) {
+    margin: 0 1.6em 0 1.6em;
 }
 
-.service-article .service-text-content {
-    padding: 5em 1em 2em 2em;
+.service-box img {
+    width: 100%;
 }
 
 /* #### SECTION BREADS #### */
@@ -296,7 +288,6 @@ main {
 figure.img-breed-container {
     max-width: 1017px;
     width: 100%;
-    /* width: 80%; */
     height: auto;
     margin: auto;
 }
@@ -493,9 +484,37 @@ dialog::before {
 
 /* #### SECTION TEAM #### */
 .sec-team {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 1400px;
     padding: 4em 1em 0 1em;
+}
+
+.sec-team h1::after {
+    width: 130px;
+    content: '';
+    display: flex;
+    margin: 0.2em auto;
+    border-bottom: 2px solid #F1B847;
+}
+
+.team-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.team-member-box {
+    padding: 1.5em;
+    width: 25%;
+}
+
+.team-member-avatar-img {
+    width: 170px;
+    border-radius: 50%;
+    border: 2px solid #F1B847;
 }
 
 /* #### SECTION PRICES #### */
@@ -503,6 +522,14 @@ dialog::before {
     width: 100%;
     max-width: 1400px;
     padding: 4em 1em 0 1em;
+}
+
+.sec-prices h1::after {
+    width: 130px;
+    content: '';
+    display: flex;
+    margin: 0.2em auto;
+    border-bottom: 2px solid #F1B847;
 }
 
 /* #### BUTTONS #### */
@@ -547,15 +574,41 @@ dialog::before {
 }
 
 /* #### PARALLAX SECTIONS #### */
+/* #### TESTIMONY #### */
 .testimony {
-    height: 500px;
+    height: auto;
     width: 100%;
     background-image: url('../assets/images/parallax-1.jpg');
     opacity: 0.8;
     background-attachment: fixed;
     background-size: cover;
+    padding: 2.5em 1em 2.5em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.testimony-wrapper {
+    width: 70%;
+    text-align: center;
+}
+
+.testimony-avatar-img {
+    width: 120px;
+    height: auto;
+    margin: 1em 0 0.1em 0;
+    border-radius: 50%;
+    border: 2px solid #F1B847;
+}
+
+.stars{ 
+    margin: 0 0 0.5em 0;
+}
+.client-name {
+    margin: 1em 0 0 0;
+}
+
+/* #### NEWSLETTER #### */
 .newsletter {
     height: 500px;
     width: 100%;
@@ -565,6 +618,7 @@ dialog::before {
     background-size: cover;
 }
 
+/* #### BRANDS #### */
 .brands {
     height: 280px;
     width: 100%;
