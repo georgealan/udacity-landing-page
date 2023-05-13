@@ -22,6 +22,7 @@ const horseBreedFirstTextBody = document.querySelector('.tfcl-body')
 const horseBreedSecondTextHeader = document.querySelector('.tscl-header')
 const horseBreedSecondTextBody = document.querySelector('.tscl-body')
 
+// Image Gallery itens
 const breedsImageGallery = document.querySelectorAll('.gallery-item')
 const modalImageGallery = document.querySelector('.gallery-img')
 const modalGallery = document.querySelector('.gallery-modal')

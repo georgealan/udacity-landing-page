@@ -111,3 +111,32 @@ a {
     font-size: 1em;
     color: #F1B847;
 }
+
+.team-member-box {
+    text-align: center;
+}
+
+.team-social-media i {
+    font-size: 1.3em;
+}
+
+/* #### MEDIA QUERIES #### */
+@media (max-width: 1080px) {
+    .hero-content h1 {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 540px) {
+    
+}
+
+@media (max-width: 420px) {
+    
+}

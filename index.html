@@ -10,13 +10,15 @@
     <link rel="stylesheet" href="assets/fontawesome/css/light.css">
     <link rel="stylesheet" href="assets/fontawesome/css/regular.css">
     <link rel="stylesheet" href="assets/fontawesome/css/solid.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/sharp.css">
     <title>Lon Lon Ranch</title>
 </head>
 <body>
     <header class="header">
         <nav id="navbar" class="nav">
-            
+            <img class="logo" src="assets/images/Logo.svg" alt="Logo">
             <ul id="menu-navigation"></ul>
+            <i id="btn-menu-mobile" class="fa-sharp fa-regular fa-bars"></i>
         </nav>
     </header>
     
@@ -97,9 +99,10 @@
         <section id="breeds" class="sections sec-breeds" data-nav="Breeds">
             <h1>Breed of horses from our ranch</h1>
             <div class="horse-title">
-                <h2 class="horse-breed-name"></h2>
+                <div class="horse-name-wraper">
+                    <i class="fa-solid fa-horse-head"></i><h2 class="horse-breed-name"></h2>
+                </div>
                 <ul class="horse-info">
-                    <li><i class="fa-solid fa-horse-head"></i></li>
                     <li><h4>HEIGHT AT WITHERS</h4><p class="horse-height"></p></li>
                     <li><h4>ORIGIN</h4><p class="horse-origin"></p></li>
                     <li><h4>COLORS</h4><p class="horse-color"></p></li>
@@ -241,10 +244,6 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="prices" class="sections sec-prices" data-nav="Prices">
-            <h1>Affordable prices for all</h1>
         </section>
 
         <div class="brands">
