@@ -1,4 +1,5 @@
 const menuNavigation = document.getElementById('menu-navigation')
+const menuNavigationMobile = document.getElementById('menu-navigation-mobile') // trash
 const sectionsLinks = document.getElementsByClassName('sections')
 const btnScrollToTop = document.getElementById('btn-scroll-top')
 const headerStyle = document.querySelector('.header')
@@ -30,6 +31,9 @@ const buttonCloseGalleryModal = document.querySelector('.btn-close-modal')
 const buttonsNextImages = document.querySelectorAll('.btn-gallery')
 let dialogModals = document.querySelectorAll('dialog');
 
+const buttomOpenMenuMobile = document.getElementById('btn-open-menu-mobile')
+const menuMobileContainer = document.getElementById('menu-mobile-wrapper')
+
 window.onload = () => {
     // Fill navbar dinamically
     for(const section of sectionsLinks) {
@@ -47,6 +51,38 @@ window.onload = () => {
         list.appendChild(link)
         menuNavigation.appendChild(list)
     }
+
+    // Control menu Mobile events
+    const menuNavigationClone = menuNavigation.cloneNode(true)
+    menuNavigationClone.setAttribute('id', 'menu-navigation-mobile')
+    menuMobileContainer.appendChild(menuNavigationClone)
+
+    buttomOpenMenuMobile.addEventListener('click', () => {
+        if(menuMobileContainer.classList.contains('menuActive')){
+            menuMobileContainer.classList.remove('menuActive')
+            buttomOpenMenuMobile.classList.remove('fa-x')
+            buttomOpenMenuMobile.classList.add('fa-bars')
+            menuMobileContainer.style.display = 'none'
+        } else {
+            menuMobileContainer.classList.add('menuActive')
+            buttomOpenMenuMobile.classList.remove('fa-bars')
+            buttomOpenMenuMobile.classList.add('fa-x')
+            menuMobileContainer.style.display = 'flex'
+        }
+        
+        let windowWidth = window.matchMedia("(max-width: 800px)")
+        windowWidth.addEventListener('change', () => {
+            if (windowWidth.matches) {
+                if(!menuMobileContainer.classList.contains('menuActive')){
+                    menuMobileContainer.style.display = 'none'
+                } else {
+                    menuMobileContainer.style.display = 'flex'
+                }
+            } else {
+                menuMobileContainer.style.display = 'none'
+            }
+        })    
+    })
 
     // Page Scrool Events
     window.addEventListener('scroll', () => {
@@ -92,7 +128,15 @@ window.onload = () => {
 
     function activeClass(id) {
         const linksNav = document.querySelectorAll('#menu-navigation li')
+        const linksNavMobile = document.querySelectorAll('#menu-navigation-mobile li')
         linksNav.forEach(link => {
+            link.classList.remove('active')
+            if(link.classList.contains(id)) {
+                link.classList.add('active')
+            }
+        })
+
+        linksNavMobile.forEach(link => {
             link.classList.remove('active')
             if(link.classList.contains(id)) {
                 link.classList.add('active')

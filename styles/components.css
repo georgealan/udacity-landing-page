@@ -23,7 +23,7 @@ body {
     margin: 0 0 0 1em;
 }
 
-#btn-menu-mobile {
+#btn-open-menu-mobile {
     display: none;
     cursor: pointer;
     font-size: 1.6em;
@@ -45,12 +45,43 @@ li {
     list-style: none;
 }
 
-li:not(:first-child) {
+.nav li:not(:first-child) {
     margin: 0 0 0 2em;  
 }
 
 .nav ul li.active {
     border-bottom: 1px solid #F1B847;
+}
+
+#menu-mobile-wrapper ul li.active {
+    border-bottom: 1px solid #F1B847;
+}
+
+#menu-mobile-wrapper {
+    display: none;
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 400px;
+    padding: 0 0 2em 0;
+    background-color: #ffffff;
+    z-index: 10;
+}
+
+#menu-navigation-mobile {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+    
+}
+
+#menu-navigation-mobile li {
+    font-size: 1.4em;
+    margin: 0 0 0.5em 0;
 }
 
 #menu-navigation {
@@ -507,7 +538,11 @@ dialog::before {
     width: 100%;
     height: auto;
     max-width: 1400px;
-    padding: 4em 1em 0 1em;
+    padding: 4em 1em 4em 1em;
+}
+
+.sec-team h1 {
+    margin: 0 0 1.5em 0;
 }
 
 .sec-team h1::after {
@@ -535,6 +570,14 @@ dialog::before {
     width: 25%;
 }
 
+.team-member-box h2 {
+    margin: 0.5em 0 0 0;
+}
+
+.team-member-box h3 {
+    margin: 0 0 0.5em 0;
+}
+
 .team-member-avatar-img {
     max-width: 170px;
     width: 100%;
@@ -542,8 +585,21 @@ dialog::before {
     border: 2px solid #F1B847;
 }
 
+.team-social-media {
+    margin: 1em 0 0 0;
+}
+
 .team-social-media i {
     cursor: pointer;
+}
+
+.team-social-media i:hover {
+    color: #F1B847;
+    transition: color 0.3s;
+}
+
+.team-social-media i:nth-child(2) {
+    margin: 0 0.5em 0 0.5em;
 }
 
 /* #### BUTTONS #### */
@@ -593,6 +649,7 @@ dialog::before {
     height: auto;
     width: 100%;
     background-image: url('../assets/images/parallax-1.jpg');
+    background-position: center;
     opacity: 0.8;
     background-attachment: fixed;
     background-size: cover;
@@ -627,6 +684,7 @@ dialog::before {
     height: 500px;
     width: 100%;
     background-image: url('../assets/images/parallax-2.jpg');
+    background-position: center;
     opacity: 0.8;
     background-attachment: fixed;
     background-size: cover;
@@ -637,6 +695,7 @@ dialog::before {
     height: 280px;
     width: 100%;
     background-image: url('../assets/images/parallax-3.jpg');
+    background-position: center;
     opacity: 0.9;
     filter: brightness(.1);
     background-attachment: fixed;
@@ -644,25 +703,6 @@ dialog::before {
 }
 
 /* #### MEDIA QUERIES #### */
-/* MENU STICKY DESKTOP VERSION */
-/* .header.sticky {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    position: sticky;
-    top: 0;
-    background-color: #ffffff;
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 1400px;
-    height: 90px;
-} */
-
 @media (max-width: 1080px) {
     .services-wrapper {
         margin: 4em 0 0 0;
@@ -695,13 +735,20 @@ dialog::before {
         display: none;
     }
 
-    #btn-menu-mobile {
+    #btn-open-menu-mobile {
         display: flex;
     }
 }
 
-
 @media (max-width: 768px) {
+    .header {
+        height: 50px;
+    }
+
+    .logo {
+        width: 110px;
+    }
+
     .team-member-box {
         width: 100%;
     }
@@ -738,6 +785,7 @@ dialog::before {
     
     .text-first-cl {
         width: 100%;
+        padding: 0 0 0 0;
     }
     
     .text-second-cl {
@@ -762,9 +810,21 @@ dialog::before {
                              'item10 item8 item8'
                              'item9 item9 item11';
     }
+
+    .text-first-cl {
+        margin: 0 0 2em 0;
+    }
+
+    .call-description {
+        margin: 0 0 1.6em 0;
+    }
 }
 
 @media (max-width: 540px) {
+    .btn-slide {
+        font-size: 2.5em; 
+    }
+
     .breed-element {
         flex-direction: column;
     }
@@ -772,11 +832,18 @@ dialog::before {
     .breed-buttons {
         width: 100%;
         flex-direction: row;
+        justify-content: space-between;
         margin: 0 0 1em 0;
     }
 
+    .btn-breed {
+        padding: 0.1em 0.1em;
+        width: 50px;
+        height: 50px;
+    }
+
     .btn-breed:not(:last-child) {
-        margin: 0 1em 0 0;
+        margin: 0 0.7em 0 0;
     }
 
     .img-breed-container {
@@ -810,5 +877,9 @@ dialog::before {
                              'item9'
                              'item10'
                              'item11';
+    }
+
+    .hero-content h1::after {
+        width: 120px;
     }
 }

@@ -40,8 +40,7 @@ h4 {
 .sec-breeds h1,
 .sec-gallery h1,
 .newsletter h1,
-.sec-team h1,
-.sec-prices h1 {
+.sec-team h1 {
     text-transform: uppercase;
     text-align: center;
 }
@@ -91,6 +90,14 @@ a {
     font-family: 'Raleway Italic';
 }
 
+/* #### BREED SECTION #### */
+
+
+/* #### TEAM SECTION #### */
+.team-member-box h3 {
+    font-size: 1.2em;
+}
+
 /* #### PARALLAX #### */
 .testimony {
     color: #fff;
@@ -134,7 +141,26 @@ a {
 }
 
 @media (max-width: 540px) {
-    
+    .hero-content h1 {
+        font-size: 1.6em;
+    }
+
+    .sec-services h1,
+    .testimony h1,
+    .sec-breeds h1,
+    .sec-gallery h1,
+    .newsletter h1,
+    .sec-team h1 {
+        font-size: 1.6em;
+    }
+
+    .service-box h2 {
+        font-size: 1.5em;
+    }
+
+    .horse-name-wraper i {
+        font-size: 1.7em;
+    }
 }
 
 @media (max-width: 420px) {
