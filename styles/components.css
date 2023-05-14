@@ -179,6 +179,10 @@ main {
     margin: 1.5em 0 0 0;
 }
 
+.btn-view-more:active {
+    transform: scale(0.90);
+}
+
 .slide-btn-container {
     display: flex;
     position: relative;

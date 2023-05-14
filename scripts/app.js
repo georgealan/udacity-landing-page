@@ -99,7 +99,7 @@ window.onload = () => {
         }
 
         // Control Menu Bar Sticky
-        if(document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+        if(document.body.scrollTop > 170 || document.documentElement.scrollTop > 170) {
             headerStyle.style.position = 'sticky'
             headerStyle.style.top = 0
             headerStyle.style.justifyContent = 'center'

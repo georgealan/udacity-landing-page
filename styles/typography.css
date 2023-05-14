@@ -57,6 +57,12 @@ a {
     text-transform: uppercase;
     font-size: 0.9em;
     text-decoration: none;
+    color: var(--body-black-font);
+}
+
+a:hover,
+a:active {
+    color: var(--primary);
 }
 
 /* #### HERO SECTION #### */
@@ -73,6 +79,10 @@ a {
 
 .btn-view-more {
     font-weight: 600;
+}
+
+.btn-view-more:hover {
+    color: var(--body-black-font);
 }
 
 .horse-info li h4 {
