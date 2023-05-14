@@ -37,7 +37,7 @@ body {
     width: 85vw;
     max-width: 1400px;
     height: 80px;
-    background-color: #fff;
+    background-color: var(--white);
     border-radius: 0.3em;
 }
 
@@ -50,11 +50,11 @@ li {
 }
 
 .nav ul li.active {
-    border-bottom: 1px solid #F1B847;
+    border-bottom: 1px solid var(--primary);
 }
 
 #menu-mobile-wrapper ul li.active {
-    border-bottom: 1px solid #F1B847;
+    border-bottom: 1px solid var(--primary);
 }
 
 #menu-mobile-wrapper {
@@ -67,7 +67,7 @@ li {
     width: 100vw;
     height: 400px;
     padding: 0 0 2em 0;
-    background-color: #ffffff;
+    background-color: var(--white);
     z-index: 10;
     animation-name: upToBottom;
     animation-duration: 1s;
@@ -76,11 +76,6 @@ li {
 @keyframes upToBottom {
     from {top: -280px;}
     to {top: 0;}
-}
-
-@keyframes bottomToUp {
-    from {top: 0; background-color: red;}
-    to {top: -280px;}
 }
 
 #menu-navigation-mobile {
@@ -160,12 +155,12 @@ main {
 .hero-content p {
     max-width: 800px;
     margin: 1em 0 0 0;
-    text-shadow: 1px 2px 5px #2b2b2b;
+    text-shadow: 1px 2px 5px var(--black-200);
 }
 
 .hero-content h1 {
     max-width: 1200px;
-    text-shadow: 1px 2px 5px #2b2b2b;  
+    text-shadow: 1px 2px 5px var(--black-200);  
 }
 
 .hero-content h1::after {
@@ -173,12 +168,12 @@ main {
     content: '';
     display: flex;
     margin: 0.2em auto;
-    border-bottom: 2px solid #F1B847;
+    border-bottom: 2px solid var(--primary);
 }
 
 .btn-view-more {
     cursor: pointer;
-    background-color: #F1B847;
+    background-color: var(--primary);
     padding: 1em 2em;
     border-radius: 0.3em;
     margin: 1.5em 0 0 0;
@@ -193,7 +188,7 @@ main {
 .btn-slide {
     display: flex;
     font-size: 3em;
-    color: #ffffff;
+    color: var(--white);
     cursor: pointer;
     background: transparent;
     border: none;
@@ -210,7 +205,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #fdb71f25;
+    background: var(--primary-alpha-1);
     mix-blend-mode: soft-light;
 }
 
@@ -233,7 +228,7 @@ main {
     content: '';
     display: flex;
     margin: 0.2em auto;
-    border-bottom: 2px solid #F1B847;
+    border-bottom: 2px solid var(--primary);
 }
 
 .services-wrapper {
@@ -275,7 +270,7 @@ main {
     content: '';
     display: flex;
     margin: 0.2em auto;
-    border-bottom: 2px solid #F1B847;
+    border-bottom: 2px solid var(--primary);
 }
 
 .breed-element {
@@ -283,8 +278,8 @@ main {
 }
 
 .horse-title {
-    border-bottom: 1px solid #F1B847;
-    border-left: 1px solid #F1B847;
+    border-bottom: 1px solid var(--primary);
+    border-left: 1px solid var(--primary);
     margin: 0 0 2em 0;
 }
 
@@ -310,8 +305,8 @@ main {
 }
 
 .horse-info li:nth-child(2) {
-    border-left: 1px solid #F1B847;
-    border-right: 1px solid #F1B847;
+    border-left: 1px solid var(--primary);
+    border-right: 1px solid var(--primary);
 }
 
 .horse-name-wraper {
@@ -332,8 +327,8 @@ main {
 }
 
 .call-description {
-    border-top: 1px solid #F1B847;
-    border-bottom: 1px solid #F1B847;
+    border-top: 1px solid var(--primary);
+    border-bottom: 1px solid var(--primary);
 }
 
 .text-first-cl h2 {
@@ -376,17 +371,17 @@ figure.img-breed-container {
     width: 75px;
     height: 75px;
     background: transparent;
-    border: 1px solid #F1B847;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 1px solid var(--primary);
+    box-shadow: var(--black-alpha-02) 0px 2px 8px 0px;
 }
 
 .btn-breed:active {
     transform: scale(0.90);
-    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    box-shadow: var(--black-alpha-006) 0px 2px 4px 0px inset;
 }
 
 .btn-breed.current {
-    background-color: #F1B847;
+    background-color: var(--primary);
 }
 
 .btn-breed:not(:last-child) {
@@ -477,7 +472,7 @@ figure.img-breed-container {
 
 dialog::before {
     content:"";
-    background: rgba(0, 0, 0, 0.8);
+    background: var(--black-alpha-08);
     position: fixed;
     top: 0;
     left: 0;
@@ -505,7 +500,7 @@ dialog::before {
     font-size: 1.7em;
     background-color: transparent;
     border: none;
-    color: #ffffff;
+    color: var(--white);
     cursor: pointer;
     padding: 1em;
 }
@@ -531,7 +526,7 @@ dialog::before {
 .btn-gallery {
     display: flex;
     font-size: 2.8em;
-    color: #ffffff;
+    color: var(--white);
     cursor: pointer;
     background: transparent;
     border: none;
@@ -561,7 +556,7 @@ dialog::before {
     content: '';
     display: flex;
     margin: 0.2em auto;
-    border-bottom: 2px solid #F1B847;
+    border-bottom: 2px solid var(--primary);
 }
 
 .team-wrapper {
@@ -593,7 +588,7 @@ dialog::before {
     max-width: 170px;
     width: 100%;
     border-radius: 50%;
-    border: 2px solid #F1B847;
+    border: 2px solid var(--primary);
 }
 
 .team-social-media {
@@ -605,7 +600,7 @@ dialog::before {
 }
 
 .team-social-media i:hover {
-    color: #F1B847;
+    color: var(--primary);
     transition: color 0.3s;
 }
 
@@ -628,7 +623,7 @@ dialog::before {
     position: fixed;
     bottom: 8vh;
     right: 4vw;
-    background-color: #F1B847;
+    background-color: var(--primary);
     font-size: 1.2em;
 }
 
@@ -638,7 +633,7 @@ dialog::before {
     justify-content: center;
     width: 100vw;
     height: auto;
-    background-color: #171615;
+    background-color: var(--black-300);
 }
 
 .footer-content {
@@ -664,8 +659,8 @@ dialog::before {
     width: 100vw;
     height: auto;
     padding: 1.2em 1.5em;
-    border-top: 1px solid #30302f;
-    background-color: #0f0f0f;
+    border-top: 1px solid var(--black-100);
+    background-color: var(--black-400);
 }
 
 .owner-social-media a:not(:last-child) {
@@ -714,7 +709,7 @@ dialog::before {
     height: auto;
     margin: 1em 0 0.1em 0;
     border-radius: 50%;
-    border: 2px solid #F1B847;
+    border: 2px solid var(--primary);
 }
 
 .stars{ 
@@ -742,10 +737,6 @@ dialog::before {
     padding: 8em 1em;
 }
 
-.newsletter-box {
-    /* width: 50%; */
-}
-
 .newsletter-form {
     display: flex;
 }
@@ -755,15 +746,15 @@ dialog::before {
     width: 100%;
     padding: 0.5em;
     margin: 0 0.3em 0 0;
-    background: rgba(255, 255, 255, 0.623);
-    border: 1px solid #b9b9b9;
+    background: var(--white-alpha-6);
+    border: 1px solid var(--gray);
     border-radius: 0.2em;
 }
 
 .newsletter-submit {
     padding: 1.6em 2em;
     cursor: pointer;
-    background-color: #F1B847;
+    background-color: var(--primary);
     border: none;
     border-radius: 0.2em;
 }
@@ -881,8 +872,8 @@ dialog::before {
     }
 
     .horse-info li:nth-child(2) {
-        border-top: 1px solid #F1B847;
-        border-bottom: 1px solid #F1B847;
+        border-top: 1px solid var(--primary);
+        border-bottom: 1px solid var(--primary);
         border-left: none;
         border-right: none;
         padding: 0 0 0 0;

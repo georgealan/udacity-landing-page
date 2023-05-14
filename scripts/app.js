@@ -25,7 +25,6 @@ const horseBreedSecondTextBody = document.querySelector('.tscl-body')
 // Get actual Year
 let today = new Date()
 let date = today.getFullYear()
-console.log(date)
 const actualYear = document.getElementById('date')
 actualYear.innerText = date
 
