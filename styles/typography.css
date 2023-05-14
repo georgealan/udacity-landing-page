@@ -103,6 +103,20 @@ a {
     color: #fff;
 }
 
+.newsletter-box {
+    color: #fff;
+}
+
+.newsletter-input {
+    font-size: 1.5em;
+    color: #000000;
+}
+
+.newsletter-submit {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
 .client-name {
     text-transform: uppercase;
     color: #F1B847;
@@ -176,6 +190,10 @@ a {
 
 /* #### MEDIA QUERIES #### */
 @media (max-width: 1080px) {
+    .newsletter-box h2 {
+        text-align: center;
+    }
+    
     .hero-content h1 {
         font-size: 3em;
     }

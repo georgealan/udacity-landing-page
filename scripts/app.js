@@ -1,5 +1,4 @@
 const menuNavigation = document.getElementById('menu-navigation')
-const menuNavigationMobile = document.getElementById('menu-navigation-mobile') // trash
 const sectionsLinks = document.getElementsByClassName('sections')
 const btnScrollToTop = document.getElementById('btn-scroll-top')
 const headerStyle = document.querySelector('.header')
@@ -22,6 +21,8 @@ const horseBreedFirstTextHeader = document.querySelector('.tfcl-header')
 const horseBreedFirstTextBody = document.querySelector('.tfcl-body')
 const horseBreedSecondTextHeader = document.querySelector('.tscl-header')
 const horseBreedSecondTextBody = document.querySelector('.tscl-body')
+
+// Get actual Year
 let today = new Date()
 let date = today.getFullYear()
 console.log(date)
@@ -68,17 +69,11 @@ window.onload = () => {
             buttomOpenMenuMobile.classList.remove('fa-x')
             buttomOpenMenuMobile.classList.add('fa-bars')
             menuMobileContainer.style.display = 'none'
-            if(menuMobileContainer.style.contain('bottomToUp')){
-                menuMobileContainer.style.animationName = 'upToBottom'
-            }
-            // menuMobileContainer.style.animationName = 'bottomToUp'
-            // menuMobileContainer.style.animationName = 'upToBottom'
         } else {
             menuMobileContainer.classList.add('menuActive')
             buttomOpenMenuMobile.classList.remove('fa-bars')
             buttomOpenMenuMobile.classList.add('fa-x')
             menuMobileContainer.style.display = 'flex'
-            // menuMobileContainer.style.animationName = 'upToBottom'
         }
         
         let windowWidth = window.matchMedia("(max-width: 800px)")
@@ -312,5 +307,4 @@ window.onload = () => {
             }
         })
     })
-
 }
