@@ -22,6 +22,11 @@ const horseBreedFirstTextHeader = document.querySelector('.tfcl-header')
 const horseBreedFirstTextBody = document.querySelector('.tfcl-body')
 const horseBreedSecondTextHeader = document.querySelector('.tscl-header')
 const horseBreedSecondTextBody = document.querySelector('.tscl-body')
+let today = new Date()
+let date = today.getFullYear()
+console.log(date)
+const actualYear = document.getElementById('date')
+actualYear.innerText = date
 
 // Image Gallery itens
 const breedsImageGallery = document.querySelectorAll('.gallery-item')
@@ -29,7 +34,7 @@ const modalImageGallery = document.querySelector('.gallery-img')
 const modalGallery = document.querySelector('.gallery-modal')
 const buttonCloseGalleryModal = document.querySelector('.btn-close-modal')
 const buttonsNextImages = document.querySelectorAll('.btn-gallery')
-let dialogModals = document.querySelectorAll('dialog');
+let dialogModals = document.querySelectorAll('dialog')
 
 const buttomOpenMenuMobile = document.getElementById('btn-open-menu-mobile')
 const menuMobileContainer = document.getElementById('menu-mobile-wrapper')
@@ -63,20 +68,26 @@ window.onload = () => {
             buttomOpenMenuMobile.classList.remove('fa-x')
             buttomOpenMenuMobile.classList.add('fa-bars')
             menuMobileContainer.style.display = 'none'
+            if(menuMobileContainer.style.contain('bottomToUp')){
+                menuMobileContainer.style.animationName = 'upToBottom'
+            }
+            // menuMobileContainer.style.animationName = 'bottomToUp'
+            // menuMobileContainer.style.animationName = 'upToBottom'
         } else {
             menuMobileContainer.classList.add('menuActive')
             buttomOpenMenuMobile.classList.remove('fa-bars')
             buttomOpenMenuMobile.classList.add('fa-x')
             menuMobileContainer.style.display = 'flex'
+            // menuMobileContainer.style.animationName = 'upToBottom'
         }
         
         let windowWidth = window.matchMedia("(max-width: 800px)")
         windowWidth.addEventListener('change', () => {
             if (windowWidth.matches) {
-                if(!menuMobileContainer.classList.contains('menuActive')){
-                    menuMobileContainer.style.display = 'none'
-                } else {
+                if(menuMobileContainer.classList.contains('menuActive')){
                     menuMobileContainer.style.display = 'flex'
+                } else {
+                    menuMobileContainer.style.display = 'none'
                 }
             } else {
                 menuMobileContainer.style.display = 'none'

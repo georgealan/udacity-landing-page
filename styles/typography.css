@@ -127,6 +127,53 @@ a {
     font-size: 1.3em;
 }
 
+/* #### FOOTER SECTION #### */
+.footer {
+    color: #cacaca;
+}
+
+.owner-social-media a {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.owner-social-media a:active,
+.owner-social-media a:hover {
+    color: #F1B847;
+    transition: color 0.3s;
+}
+
+.footer-list a {
+    text-transform: initial;
+    color: #cacaca;
+    cursor: pointer;
+}
+
+.footer-list a:active,
+.footer-list a:hover,
+.footer-list a:checked {
+    color: #F1B847;
+    transition: color 0.3s;
+}
+
+.footer-content-box h2 {
+    text-transform: uppercase;
+    font-size: 1.1em;
+    color: #fff;
+    margin: 0.7em 0 0.7em 0;
+}
+
+.footer-content-box h3 {
+    text-transform: uppercase;
+    font-size: 1.1em;
+    color: #fff;
+    margin: 0.7em 0 0.7em 0;
+}
+
+.footer-social-icon-wrapper a li i {
+    font-size: 1.7em;
+}
+
 /* #### MEDIA QUERIES #### */
 @media (max-width: 1080px) {
     .hero-content h1 {

@@ -69,6 +69,18 @@ li {
     padding: 0 0 2em 0;
     background-color: #ffffff;
     z-index: 10;
+    animation-name: upToBottom;
+    animation-duration: 1s;
+}
+
+@keyframes upToBottom {
+    from {top: -280px;}
+    to {top: 0;}
+}
+
+@keyframes bottomToUp {
+    from {top: 0; background-color: red;}
+    to {top: -280px;}
 }
 
 #menu-navigation-mobile {
@@ -293,13 +305,16 @@ main {
 
 .horse-info li:first-child {
     margin-left: 0;
-    margin-right: -1em;
+    padding-left: 0;
+}
+
+.horse-info li {
+    padding: 0 1.2em 0 1.2em;
 }
 
 .horse-info li:nth-child(2) {
     border-left: 1px solid #F1B847;
     border-right: 1px solid #F1B847;
-    padding: 0 1.3em 0 1.3em;
 }
 
 .horse-name-wraper {
@@ -366,7 +381,6 @@ figure.img-breed-container {
     background: transparent;
     border: 1px solid #F1B847;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    
 }
 
 .btn-breed:active {
@@ -602,6 +616,10 @@ dialog::before {
     margin: 0 0.5em 0 0.5em;
 }
 
+.footer-social-icon-wrapper a:not(:last-child) {
+    margin-right: 1em;
+}
+
 /* #### BUTTONS #### */
 #btn-scroll-top {
     display: none;
@@ -611,7 +629,7 @@ dialog::before {
     border-radius: 10%;
     cursor: pointer;
     position: fixed;
-    bottom: 4vh;
+    bottom: 8vh;
     right: 4vw;
     background-color: #F1B847;
     font-size: 1.2em;
@@ -622,25 +640,55 @@ dialog::before {
     display: flex;
     justify-content: center;
     width: 100vw;
-    height: 400px; /* Change to auto when insert content */
+    height: auto;
     background-color: #171615;
 }
 
 .footer-content {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     max-width: 1400px;
     height: auto;
     padding: 1em;
-    background-color: #fff;
+}
+
+.footer-content-box {
+    width: 25%;
+    height: auto;
+    padding: 1em;
 }
 
 .footer-bottom {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     width: 100vw;
-    height: 85px;
-    padding: 1em;
+    height: auto;
+    padding: 1.2em 1.5em;
     border-top: 1px solid #30302f;
     background-color: #0f0f0f;
+}
+
+.owner-social-media a:not(:last-child) {
+    margin-right: 0.5em;
+}
+
+#date {
+    margin-right: 0.4em;
+}
+
+.footer-list {
+    padding: 0;
+}
+
+.footer-list-icon {
+    margin: 0 1em 0 0;
+}
+
+.footer-social-icon-wrapper {
+    display: flex;
 }
 
 /* #### PARALLAX SECTIONS #### */
@@ -675,6 +723,7 @@ dialog::before {
 .stars{ 
     margin: 0 0 0.5em 0;
 }
+
 .client-name {
     margin: 1em 0 0 0;
 }
@@ -692,14 +741,30 @@ dialog::before {
 
 /* #### BRANDS #### */
 .brands {
-    height: 280px;
+    height: auto;
     width: 100%;
     background-image: url('../assets/images/parallax-3.jpg');
     background-position: center;
-    opacity: 0.9;
-    filter: brightness(.1);
     background-attachment: fixed;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.awards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 9em;
+    max-width: 1400px;
+    width: 100%;
+    padding: 2em 1em 2em 1em;
+    filter: brightness(.4);
+}
+
+.awards-wrapper img {
+    width: 120px;
 }
 
 /* #### MEDIA QUERIES #### */
@@ -728,6 +793,14 @@ dialog::before {
                              'item6 item7 item10 item11'
                              'item6 item9 item9 item9';
     }
+
+    .awards-wrapper {
+        gap: 2em;
+    }
+
+    .footer-content-box {
+        width: 50%;
+    }
 }
 
 @media (max-width: 800px) {
@@ -737,6 +810,10 @@ dialog::before {
 
     #btn-open-menu-mobile {
         display: flex;
+    }
+
+    .awards-wrapper {
+        gap: 2em;
     }
 }
 
@@ -778,6 +855,10 @@ dialog::before {
         padding: 0 0 0 0;
     }
 
+    .horse-info li:last-child {
+        padding-left: 0;
+    }
+
     .breed-text {
         flex-direction: column;
         margin: 5em 0 5em 0;
@@ -817,6 +898,10 @@ dialog::before {
 
     .call-description {
         margin: 0 0 1.6em 0;
+    }
+
+    .footer-content-box {
+        width: 100%;
     }
 }
 
