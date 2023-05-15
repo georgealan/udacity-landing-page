@@ -62,7 +62,8 @@ window.onload = () => {
     menuNavigationClone.setAttribute('id', 'menu-navigation-mobile')
     menuMobileContainer.appendChild(menuNavigationClone)
 
-    buttomOpenMenuMobile.addEventListener('click', () => {
+    buttomOpenMenuMobile.addEventListener('click', (e) => {
+        e.preventDefault()
         if(menuMobileContainer.classList.contains('menuActive')){
             menuMobileContainer.classList.remove('menuActive')
             buttomOpenMenuMobile.classList.remove('fa-x')
@@ -99,7 +100,7 @@ window.onload = () => {
         }
 
         // Control Menu Bar Sticky
-        if(document.body.scrollTop > 170 || document.documentElement.scrollTop > 170) {
+        if(document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
             headerStyle.style.position = 'sticky'
             headerStyle.style.top = 0
             headerStyle.style.justifyContent = 'center'
@@ -122,10 +123,8 @@ window.onload = () => {
         }
 
         // Control Active Links
-        let scrollPosition = document.documentElement.scrollTop
         for(const section of sectionsLinks) {
-            if(scrollPosition >= section.offsetTop - section.offsetHeight * 0.25 && 
-                scrollPosition < section.offsetTop + section.offsetHeight - section.offsetHeight * 0.25) {
+            if(section.getBoundingClientRect().top < 30) {
                 activeClass(section.attributes.id.value)
             }
         }
@@ -198,7 +197,8 @@ window.onload = () => {
     })
 
     // Manual control to switch the video in descending order
-    btnSlideLeft.addEventListener('click', () => {
+    btnSlideLeft.addEventListener('click', (e) => {
+        e.preventDefault()
         if(count > 1) {
             count--
             videoBackground.src = 'assets/videos/video-0' + count + '.mp4'
@@ -208,7 +208,8 @@ window.onload = () => {
     })
 
     // Manual control to change the video, in an increasing order
-    btnSlideRight.addEventListener('click', () => {
+    btnSlideRight.addEventListener('click', (e) => {
+        e.preventDefault()
         if(count < 5) {
             count++
             videoBackground.src = 'assets/videos/video-0' + count + '.mp4'
@@ -218,7 +219,8 @@ window.onload = () => {
     })
 
     // Control buttom scroll to top
-    btnScrollToTop.addEventListener('click', () => {
+    btnScrollToTop.addEventListener('click', (e) => {
+        e.preventDefault()
         document.body.scrollTop = 0
         document.documentElement.scrollTop = 0
     })
@@ -244,7 +246,8 @@ window.onload = () => {
     }
 
     buttonsBreads.forEach(button => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault()
             removeCurrent()
             button.classList.add('current')
             let index = button.dataset.json
@@ -264,7 +267,8 @@ window.onload = () => {
     
     // Open modal when clicking on an image in the gallery
     breedsImageGallery.forEach(image => {
-        image.addEventListener('click', () => {
+        image.addEventListener('click', (e) => {
+            e.preventDefault()
             let actualImgIndex = image.dataset.index
             modalImageGallery.src = breedsImageGallery[actualImgIndex].src
             modalImageGallery.alt = breedsImageGallery[actualImgIndex].alt
@@ -274,12 +278,15 @@ window.onload = () => {
     })
 
     // Control buttom close Modal
-    buttonCloseGalleryModal.addEventListener('click', () => {
+    buttonCloseGalleryModal.addEventListener('click', (e) => {
+        e.preventDefault()
         modalGallery.close()
     })
+
     // Close dialog modals when click in outside, backdrop
     dialogModals.forEach(dialog => {
         dialog.addEventListener('click', (e) => {
+            e.preventDefault()
             if(e.target.nodeName === 'DIALOG') {
                 dialog.close();
             }
@@ -288,7 +295,8 @@ window.onload = () => {
 
     // Control modal buttons next and preview images
     buttonsNextImages.forEach(buttom => {
-        buttom.addEventListener('click', () => {
+        buttom.addEventListener('click', (e) => {
+            e.preventDefault()
             if(buttom.dataset.side === 'left') {
                 if(actualIndex > 0) {
                     actualIndex--
